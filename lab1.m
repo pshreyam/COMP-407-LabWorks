@@ -31,6 +31,13 @@ B
 %% Sum = A + B
 %% Difference = B - A
 Product_A_B = A * B
-%% Product_B_A = B * A
+Product_B_A = B * A
 Transpose_A = A'
 Transpose_B = B'
+
+%% For Checking Error
+%% Redefine B of size 4 x 2
+B = [1, 2; 3, 4; 5, 6; 7, 8];
+B
+Product_A_B = A * B
+Product_B_A = B * A
