@@ -30,6 +30,8 @@ xlabel("n")
 ylabel("y[n] = x[n] * h[n]")
 title("Linear Convolution between x[n] = [1, 1, 1] and h[n] = [1, 1, 1]")
 
+pause
+
 %% 1(b)
 start_n = 0
 end_n = 4
@@ -59,6 +61,8 @@ legend("y[n]")
 xlabel("n")
 ylabel("y[n] = x[n] * h[n]")
 title("Linear Convolution between x[n] = [0, 1, 2, 3, 4] and h[n] = [0, 2, 3, 4, 5]")
+
+pause
 
 %% Circluar Convolution
 
