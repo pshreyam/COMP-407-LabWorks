@@ -63,6 +63,33 @@ title("Linear Convolution between x[n] = [0, 1, 2, 3, 4] and h[n] = [0, 2, 3, 4,
 %% Circluar Convolution
 
 %% 2
-
+start_n = 0
+end_n = 3
+n = start_n : 1 : end_n
 x1 = [1, 2, 2, 0]
 x2 = [1, 2, 3, 4]
+X1 = fft(x1) % Fast Fourier Transform of x1
+X2 = fft(x2) % Fast Fourier Transform of x2
+Y = X1.*X2 % Multiplication of X1 and X2
+y = ifft(Y) % Inverse Fast Fourier Transform of Y
+
+subplot(3, 1, 1)
+stem(n, x1)
+legend("x1[n]")
+xlabel("n")
+ylabel("x1[n]")
+title("Signal x1[n] = [1, 2, 2, 0]")
+
+subplot(3, 1, 2)
+stem(n, x2)
+legend("x2[n]")
+xlabel("n")
+ylabel("x2[n]")
+title("Signal x2[n] = [1, 2, 3, 4]")
+
+subplot(3, 1, 3)
+stem(n, y)
+legend("y[n]")
+xlabel("n")
+ylabel("y[n]")
+title("Circular Convolution between x1[n] = [1, 2, 2, 0] and x2[n] = [1, 2, 3, 4]")
