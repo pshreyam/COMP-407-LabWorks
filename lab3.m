@@ -8,6 +8,7 @@ T = 1 / f % Signal Time Period
 t = 0 : 0.000001 : cycles * T
 x = 5 * sin(2 * pi * f * t)
 
+figure
 subplot(4, 1, 1)
 plot(t, x)
 legend("x = 5sin(2πft)")
@@ -85,6 +86,7 @@ T = 1 / f % Signal Time Period
 t = 0 : 0.000001 : cycles * T
 x = 5 * cos(2 * pi * f * t)
 
+figure
 subplot(4, 1, 1)
 plot(t, x)
 legend("x = 5cos(2πft)")
